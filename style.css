@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    position: relative;
+}
+
+/* Background image overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./bg\ img.jpeg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Container for the to-do app */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Input and add button */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+#add-btn {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#add-btn i {
+    font-size: 1.2rem;
+}
+
+#add-btn:hover {
+    background-color: #574bdb;
+}
+
+/* Task list styling */
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.task-item.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+}
+
+.task-text {
+    font-size: 1rem;
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btns i {
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.action-btns i:hover {
+    color: #6c63ff;
+}
